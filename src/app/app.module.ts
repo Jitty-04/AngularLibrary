@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { UserregisterComponent } from './userregister/userregister.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { BookentryComponent } from './bookentry/bookentry.component';
+import { BooksearchComponent } from './booksearch/booksearch.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BookentryComponent } from './bookentry/bookentry.component';
     AdminLoginComponent,
     UserregisterComponent,
     UserloginComponent,
-    BookentryComponent
+    BookentryComponent,
+    BooksearchComponent
   ],
   imports: [
     BrowserModule,
