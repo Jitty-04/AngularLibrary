@@ -12,53 +12,53 @@
                     </div>
                     <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control">
+                    <input name="Name" [(ngModel)]="Name" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Adhar No:</label>
-                    <input type="number" class="form-control">
+                    <input name="Adhar" [(ngModel)]="Adhar" type="number" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Adress</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <label for="" class="form-label">Address</label>
+                    <textarea name=" Address" [(ngModel)]=" Address" id="" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Pincode</label>
-                    <input type="number" class="form-control">
+                    <input name="pincode" [(ngModel)]="pincode" type="number" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">DOB</label>
-                    <input type="date" class="form-control">
+                    <input name="DOB" [(ngModel)]="DOB" type="date" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Email</label>
-                    <input type="email" class="form-control">
+                    <input name="Email" [(ngModel)]="Email" type="email" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Mobile Number</label>
-                    <input type="number" class="form-control">
+                    <input name=" mobileNumber" [(ngModel)]=" mobileNumber" type="number" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">User Name</label>
-                    <input type="text" class="form-control">
+                    <input name="userName" [(ngModel)]="userName" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Password</label>
-                    <input type="password" class="form-control">
+                    <input name=" password" [(ngModel)]=" password" type="password" class="form-control">
                 </div>
                 
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control">
+                    <input name="confirmPassword" [(ngModel)]="confirmPassword" type="password" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                    <button class="btn btn-primary">Register</button>
+                    <button (click)=" readValues()" class="btn btn-primary">Register</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                <a href="/userlogin" class="text-primary stretched-link"><h3>Click to go to userlogin</h3></a>
-                
+                    <a href="/userlogin" class="text-primary"><h3>Click to go to userlogin</h3></a>
+                    
                 </div>
             
 
