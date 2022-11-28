@@ -14,24 +14,24 @@
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Name</label>
-                <input type="text" class="form-control">
+                <input name="name" [(ngModel)]="name" type="text" class="form-control">
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Booktitle</label>
-                <input type="text" class="form-control">
+                <input name="title" [(ngModel)]="title" type="text" class="form-control">
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Date of issue</label>
-                <input type="date" class="form-control">
+                <input name="dateOfIssue" [(ngModel)]="dateOfIssue" type="date" class="form-control">
             </div>
             <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <label for="" class="form-label">Membership number</label>
-                <input type="number" class="form-control">
+                <input name=" membershipNumber" [(ngModel)]=" membershipNumber" type="number" class="form-control">
             </div>
             
             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                <button class="btn btn-success">Submit</button>
+                <button (click)="readValues()" class="btn btn-success">Submit</button>
             </div>
             
         </div>

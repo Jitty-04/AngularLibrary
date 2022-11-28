@@ -14,6 +14,7 @@ import { BookissueComponent } from './bookissue/bookissue.component';
 import { BookviewComponent } from './bookview/bookview.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 const myRouter:Routes=[
   {
   path:"",
@@ -72,7 +73,8 @@ const myRouter:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRouter)
+    RouterModule.forRoot(myRouter),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
