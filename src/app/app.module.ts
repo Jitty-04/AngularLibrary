@@ -15,6 +15,7 @@ import { BookviewComponent } from './bookview/bookview.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+
 const myRouter:Routes=[
   {
   path:"",
@@ -53,6 +54,10 @@ const myRouter:Routes=[
 {
   path:"userregistration",
   component:UserregisterComponent
+},
+{
+  path:"issue",
+  component:BookissueComponent
 }
 ]
 
@@ -68,7 +73,8 @@ const myRouter:Routes=[
     BookeditComponent,
     BookissueComponent,
     BookviewComponent,
-    NavigationComponent
+    NavigationComponent,
+
   ],
   imports: [
     BrowserModule,
