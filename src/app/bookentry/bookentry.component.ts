@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-bookentry',
@@ -7,20 +8,48 @@ import { Component } from '@angular/core';
 })
 export class BookentryComponent {
 
-  Name=""
-  Author=""
-  Description=""
-  Publisher=""
-  Language=""
-  Distributor=""
-  releaseDate=""
+  name=""
+  author=""
+  description=""
+  publisher=""
+  language=""
+  distributor=""
+  year=""
   price=""
-  Image=""
+  image=""
+  
+  constructor(private api:ApiService){}
 
   readValue=()=>
   {
-    let data:any={"Name":this.Name,"Author":this.Author,"Description":this.Description,"Publisher":this.Publisher,"Language":this.Language,"Distributor":this.Distributor,"releaseDate":this.releaseDate,"price":this.price,"Image":this.Image}
+    let data:any={"name":this.name,"author":this.author,"description":this.description,"publisher":this.publisher,"language":this.language,"distributor":this.distributor,"year":this.year,"price":this.price,"image":this.image}
   console.log(data)
+  this.api.addBook(data).subscribe(
+    (response:any)=>
+    {
+      console.log(response)
+      if (response.status=="success") {
+        alert("Book added successfully")
+        this.name=""
+        this.author=""
+        this.description=""
+        this.publisher=""
+        this.language=""
+        this.distributor=""
+        this.year=""
+        this.price=""
+        this.image=""
+      
+        
+      } else {
+        alert("something went wrong")
+      }
+    }
+  )
+
+
 }
 
 }
+
+

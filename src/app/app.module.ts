@@ -15,6 +15,11 @@ import { BookviewComponent } from './bookview/bookview.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UsernavComponent } from './usernav/usernav.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { UserviewComponent } from './userview/userview.component';
+import { UsersearchComponent } from './usersearch/usersearch.component';
 
 const myRouter:Routes=[
   {
@@ -58,6 +63,18 @@ const myRouter:Routes=[
 {
   path:"issue",
   component:BookissueComponent
+},
+{
+  path:"userhome",
+  component:UserhomeComponent
+},
+{
+  path:"userview",
+  component:UserviewComponent
+},
+{
+  path:"usersearch",
+  component:UsersearchComponent
 }
 ]
 
@@ -74,13 +91,18 @@ const myRouter:Routes=[
     BookissueComponent,
     BookviewComponent,
     NavigationComponent,
+    UsernavComponent,
+    UserhomeComponent,
+    UserviewComponent,
+    UsersearchComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRouter),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

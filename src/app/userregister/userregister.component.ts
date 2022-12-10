@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-userregister',
@@ -6,25 +8,44 @@ import { Component } from '@angular/core';
   styleUrls: ['./userregister.component.css']
 })
 export class UserregisterComponent {
+  constructor(private api:ApiService){}
 
-  Name=""
-  Adhar=""
-  Address=""
+  name=""
+  adhar=""
+  address=""
   pincode=""
-  DOB=""
-  Email=""
-  mobileNumber=""
-  userName=""
+  date=""
+  email=""
+  mb=""
+  username=""
   password=""
   confirmPassword=""
+  
 
   readValues=()=>
   {
-    let data:any={"Name":this.Name,"Adhar":this.Adhar,"Address":this.Address,"pincode":this.pincode,"DOB":this.DOB,"Email":this.Email,"mobileNumber":this.mobileNumber,"userName":this.userName,"password":this.password,"confirmPassword":this.confirmPassword}
+    let data:any={"name":this.name,"adhar":this.adhar,"address":this.address,"pincode":this.pincode,"date":this.date,"email":this.email,"mb":this.mb,"username":this.username,"password":this.password}
     console.log(data)
+    this.api.addUsers(data).subscribe(
+      (response:any)=>
+      {
+        console.log(response)
+        if (response.status=="success") {
+          alert("user registered successfully")
+         
+      
+          
+        } else {
+          alert("something went wrong")
+        }
+      }
+    )
+  
+  
+  }
   
   }
 
 
 
-}
+

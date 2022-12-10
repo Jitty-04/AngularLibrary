@@ -1,0 +1,25 @@
+<app-usernav></app-usernav>
+<div class="container">
+    <div class="row g-3">
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of data">
+              <div class="card">
+                              
+                  <div class="card-body">
+                      
+                      <img height="150px" width="150px" src="{{i.image}}" class="card-img-bottom" alt="...">
+                      
+      
+                              <h5 class="card-title">{{i.name}} </h5>
+                              <p class="card-text">Category:{{i.category}}</p>
+                              <p class="card-text">Description:{{i.description}}</p>
+                              <p class="card-text">Price:{{i.price}}</p>
+                              <p class="card-text"><button class="btn-suceess">Buy Now</button></p>
+  
+                              
+                           
+      
+                  </div>
+                  </div>
+      </div></div></div>
+   
+  

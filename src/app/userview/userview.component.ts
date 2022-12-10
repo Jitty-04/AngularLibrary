@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-bookview',
-  templateUrl: './bookview.component.html',
-  styleUrls: ['./bookview.component.css']
+  selector: 'app-userview',
+  templateUrl: './userview.component.html',
+  styleUrls: ['./userview.component.css']
 })
-export class BookviewComponent {
+export class UserviewComponent {
   constructor(private api:ApiService){
     api.fetchBook().subscribe(
         (response:any)=>
@@ -17,7 +17,5 @@ export class BookviewComponent {
     }
     
       data:any=[] 
-
-   
 
 }
